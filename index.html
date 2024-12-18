@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>九荣宝宝我爱你呀</title>
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+<style type="text/css">
+	body {
+            background-image: url("images/1111.jpg");
+            background-size: 100% 100%;
+        }
+</style>
+</head>
+<body>
+<div class="box">
+	<ul class="minbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol class="maxbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
+</body>
+<audio id="vd" autoplay loop preload="auto" src="./music.mp3">
+</audio>
+
+<script type="text/javascript">
+    window.onload = function() {
+        var music = document.getElementById("vd");
+        music.play(); // 自动播放
+        
+        // 确保音乐持续播放
+        setInterval(function(){
+            if (music.paused) {
+                music.play();
+            }
+        }, 100);
+    }
+    
+    // 处理用户交互后自动播放
+    document.addEventListener('click', function() {
+        var music = document.getElementById("vd");
+        music.play();
+    });
+</script>
+
+</html>
